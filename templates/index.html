@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSR POS</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Daftar Product</h1>
+    <form action="" method="post">
+        <input name="Name" placeholder="Nama Produk">
+        <input name="Price" placeholder="Harga" type="number">
+        <input name="Stock" placeholder="Stock" type="text">
+        <button type="submit">Tambah</button>
+    </form>
+    {{ range .products }}
+        <li>{{ .Name }} - Rp {{ .Price }} - Stock: {{ .Stock }}</li>
+    {{ end }}
+</body>
+</html>
